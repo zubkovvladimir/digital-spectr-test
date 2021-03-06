@@ -59,6 +59,15 @@ function refresh(done) {
   done();
 }
 
+function copy() {
+  return src([
+    './source/fonts/*.{woff,woff2}'
+  ], {
+    base: 'source'
+  })
+  .pipe(dest('build'));
+}
+
 function browserSync() {
   server.init({
     server: 'build/',
@@ -69,5 +78,5 @@ function browserSync() {
   })
 }
 
-exports.build = series(clean, styles, scripts, html);
+exports.build = series(clean, styles, scripts, html, copy);
 exports.start = parallel(browserSync, watching);

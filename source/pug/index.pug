@@ -7,10 +7,10 @@ html(lang="ru")
     meta(name="viewport" content="width=device-width, initial-scale=1")
   body
     section(class="feedback")
-      form(action="POST" class="form")
-        p Задать вопрос
-        input(type="text" name="name" class="form__name")
-        input(type="number" name="phone" class="form__phone")
-        input(type="email" name="email" class="form__email")
-        input(type="button" class="form__button")
+      form(action="https://60376bfd5435040017722533.mockapi.io/form" method="POST" class="form")
+        h2(class="form__title") Задать вопрос
+        input(type="text" name="name" class="form__input form__input--name" placeholder="Фамилия Имя Отчество *")
+        input(type="number" name="phone" class="form__input form__input--phone" placeholder="Телефон *")
+        input(type="email" name="email" class="form__input form__input--email" placeholder="Email")
+        button(type="submit" class="form__button") Отправить запрос
     script(src="./js/main.min.js")

@@ -7,9 +7,9 @@
 ### **Используемые инструменты:**
 1. Pixel Perfect. 
 2. БЭМ
-3. SCSS/LESS
-4. Grunt/Gulp/Webpack    
-5. Модульную сетку (flex/grid)
+3. LESS
+4. Gulp 
+5. Flex
 6. Pug
 7. JS-валидация
 
