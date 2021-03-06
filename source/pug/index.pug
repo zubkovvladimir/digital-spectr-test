@@ -1,0 +1,16 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title Задать вопрос Digital Spectr
+    link(rel="stylesheet", href="./css/style.min.css")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+    section(class="feedback")
+      form(action="POST" class="form")
+        p Задать вопрос
+        input(type="text" name="name" class="form__name")
+        input(type="number" name="phone" class="form__phone")
+        input(type="email" name="email" class="form__email")
+        input(type="button" class="form__button")
+    script(src="./js/main.min.js")

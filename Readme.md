@@ -14,17 +14,16 @@
 7. JS-валидация
 
 ---
-<br>
 <h2 align="center">Установка и запуск</h2>
 
 ### Скачать
 ```sh
-git clone git@github.com:zubkovvladimir/reactive-media-test.git
+git clone git@github.com:zubkovvladimir/digital-spectr-test.git
 ```
 
 ### Перейти в папку
 ```sh
-cd reactive-media-test
+cd digital-spectr-test  
 ```
 
 ### Установить

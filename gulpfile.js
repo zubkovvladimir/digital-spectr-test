@@ -10,6 +10,7 @@ const del = require('del');
 const plumber = require('gulp-plumber');
 const sourcemap = require('gulp-sourcemaps');
 const csso = require("gulp-csso");
+const pug = require("gulp-pug");
 
 function styles() {
   return src('source/less/style.less')
@@ -35,12 +36,11 @@ function scripts() {
   .pipe(server.stream())
 }
 
-function copy() {
-  return src([
-    'source/*.html'
-  ], {
-    base: 'source'
-  })
+function html() {
+  return src('source/pug/*.pug').
+  pipe(pug({
+    pretty: true
+  }))
   .pipe(dest('build'))
 }
 
@@ -51,7 +51,7 @@ function clean() {
 function watching() {
   watch(['source/less/**/*.less'], series(styles, refresh));
   watch(['source/js/**/*.js'], series(scripts, refresh));
-  watch(['source/*.html'], series(copy, refresh));
+  watch(['source/pug/*.pug'], series(html, refresh));
 }
 
 function refresh(done) {
@@ -69,5 +69,5 @@ function browserSync() {
   })
 }
 
-exports.build = series(clean, styles, scripts, copy);
+exports.build = series(clean, styles, scripts, html);
 exports.start = parallel(browserSync, watching);
