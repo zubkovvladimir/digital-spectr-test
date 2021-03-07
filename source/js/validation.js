@@ -10,6 +10,8 @@ const inputName = document.querySelector('.form__input--name');
 const inputPhone = document.querySelector('.form__input--phone');
 const inputEmail = document.querySelector('.form__input--email');
 
+// валидирует инпуты
+
 const checkInputValidity = function (inputElement, pattern, warn) {
   const value = inputElement.value;
 
