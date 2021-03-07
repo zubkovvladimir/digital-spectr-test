@@ -1,8 +1,8 @@
 .font-face(@font-name, @path, @weight: normal, @style: normal) {
   @font-face {
     font-family: @font-name;
-    src: url('@{path}.woff') format("woff"),
-          url('@{path}.woff2') format("woff2");
+    src: url("@{path}.woff") format("woff"),
+      url("@{path}.woff2") format("woff2");
     font-weight: @weight;
     font-style: @style;
   }
@@ -10,7 +10,7 @@
 
 .font-style(@color: @black, @line-height: 20px, @font-size: 15px, @font-weight: 400) {
   color: @color;
-  font-family: 'Roboto', 'Arial', sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   line-height: @line-height;
   font-size: @font-size;
   font-weight: @font-weight;

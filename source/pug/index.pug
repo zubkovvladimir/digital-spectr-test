@@ -9,8 +9,8 @@ html(lang="ru")
     section(class="feedback")
       form(action="https://60376bfd5435040017722533.mockapi.io/form" method="POST" class="form")
         h2(class="form__title") Задать вопрос
-        input(type="text" name="name" class="form__input form__input--name" placeholder="Фамилия Имя Отчество *")
-        input(type="number" name="phone" class="form__input form__input--phone" placeholder="Телефон *")
+        input(type="text" name="name" class="form__input form__input--name" placeholder="Фамилия Имя Отчество *" required)
+        input(type="tel" name="phone" class="form__input form__input--phone" placeholder="Телефон *" required)
         input(type="email" name="email" class="form__input form__input--email" placeholder="Email")
         button(type="submit" class="form__button") Отправить запрос
     script(src="./js/main.min.js")
