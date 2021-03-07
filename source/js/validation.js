@@ -22,19 +22,19 @@ const checkInputValidity = function (inputElement, pattern, warn) {
   }
 }
 
-const onInputNameInput = function () {
+const onNameInput = function () {
   checkInputValidity(inputName, NAME_PATTERN, NAME_WARN);
 }
 
-const onInputPhoneInput = function () {
+const onPhoneInput = function () {
   checkInputValidity(inputPhone, PHONE_PATTERN, PHONE_WARN);
 }
 
-const onInputEmailInput = function () {
+const onEmailInput = function () {
   checkInputValidity(inputEmail, EMAIL_PATTERN, EMAIL_WARN);
 }
 
 
-inputName.addEventListener('input', onInputNameInput);
-inputPhone.addEventListener('input', onInputPhoneInput);
-inputEmail.addEventListener('input', onInputEmailInput);
+inputName.addEventListener('input', onNameInput);
+inputPhone.addEventListener('input', onPhoneInput);
+inputEmail.addEventListener('input', onEmailInput);
