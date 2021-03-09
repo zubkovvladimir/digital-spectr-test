@@ -3,14 +3,14 @@ const { src, dest, watch, series, parallel } = require('gulp');
 const less = require('gulp-less');
 const rename = require('gulp-rename');
 const server = require('browser-sync').create();
-const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
 const autoprefixer = require('gulp-autoprefixer');
 const del = require('del');
 const plumber = require('gulp-plumber');
 const sourcemap = require('gulp-sourcemaps');
 const csso = require("gulp-csso");
 const pug = require("gulp-pug");
+const gulpWebpack = require("gulp-webpack");
+const webpack = require("webpack");
 
 function styles() {
   return src('source/less/style.less')
@@ -26,12 +26,9 @@ function styles() {
 }
 
 function scripts() {
-  return src([
-    'source/js/**/*.js'
-  ], {
-    base: 'source'
-  })
-  .pipe(dest('build'))
+  return src('source/js/main.js')
+  .pipe(gulpWebpack(require('./webpack.config.js'), webpack))
+  .pipe(dest('build/js'))
   .pipe(server.stream())
 }
 
