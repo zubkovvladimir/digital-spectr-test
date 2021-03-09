@@ -16,26 +16,26 @@ const checkInputValidity = function (inputElement, pattern, warn) {
   const value = inputElement.value;
 
   if (value.match(pattern)) {
-    inputElement.setCustomValidity(warn)
+    inputElement.setCustomValidity(warn);
   } else {
-    inputElement.setCustomValidity('')
+    inputElement.setCustomValidity('');
   }
-}
+};
 
 const onNameInput = function () {
   checkInputValidity(inputName, NAME_PATTERN, NAME_WARN);
-}
+};
 
 const onPhoneInput = function () {
   checkInputValidity(inputPhone, PHONE_PATTERN, PHONE_WARN);
-}
+};
 
 const onEmailInput = function () {
   checkInputValidity(inputEmail, EMAIL_PATTERN, EMAIL_WARN);
-}
+};
 
 export const addValidationListeners = function () {
   inputName.addEventListener('input', onNameInput);
   inputPhone.addEventListener('input', onPhoneInput);
   inputEmail.addEventListener('input', onEmailInput);
-}
+};

@@ -9,4 +9,7 @@ env:
   browser: true
 
 extends:
-  "htmlacademy/vanilla"
+  "airbnb-base/legacy"
+rules: {
+  func-names: off
+}

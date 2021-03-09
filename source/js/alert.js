@@ -1,4 +1,4 @@
-import {setDebounce} from './debounce.js';
+import { setDebounce } from './debounce.js';
 
 const ALERT_INTERVAL = 3000;
 const ALERT_TEXT = 'Не удалось отправить форму, попробуйте позднее.';
