@@ -34,7 +34,8 @@ const onEmailInput = function () {
   checkInputValidity(inputEmail, EMAIL_PATTERN, EMAIL_WARN);
 }
 
-
-inputName.addEventListener('input', onNameInput);
-inputPhone.addEventListener('input', onPhoneInput);
-inputEmail.addEventListener('input', onEmailInput);
+export const addValidationListeners = function () {
+  inputName.addEventListener('input', onNameInput);
+  inputPhone.addEventListener('input', onPhoneInput);
+  inputEmail.addEventListener('input', onEmailInput);
+}

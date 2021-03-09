@@ -27,11 +27,11 @@ function styles() {
 
 function scripts() {
   return src([
-    'source/js/*.js'
-  ])
-  .pipe(concat('main.min.js'))
-  .pipe(uglify())
-  .pipe(dest('build/js'))
+    'source/js/**/*.js'
+  ], {
+    base: 'source'
+  })
+  .pipe(dest('build'))
   .pipe(server.stream())
 }
 
