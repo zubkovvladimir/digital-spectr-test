@@ -8,11 +8,12 @@
 1. Pixel Perfect. 
 2. БЭМ
 3. LESS
-4. Gulp 
-5. Flex
-6. Pug
-7. JS-валидация
-8. AJAX
+4. Gulp
+5. Webpack
+6. Flex
+7. Pug
+8. JS-валидация
+9. AJAX
 
 ---
 <h2 align="center">Установка и запуск</h2>
