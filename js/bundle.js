@@ -125,17 +125,14 @@ const inputEmail = document.querySelector('.form__input--email');
 
 const warnMap = {
   name: {
-    input: inputName,
     text: NAME_TEXT,
     pattern: NAME_PATTERN
   },
   phone: {
-    input: inputPhone,
     text: PHONE_TEXT,
     pattern: PHONE_PATTERN
   },
   email: {
-    input: inputPhone,
     text: EMAIL_TEXT,
     pattern: EMAIL_PATTERN
   }
@@ -154,15 +151,15 @@ const checkInputValidity = function (inputElement, pattern, warn) {
 };
 
 const onNameInput = function () {
-  checkInputValidity(warnMap.name.input, warnMap.name.pattern, warnMap.name.text);
+  checkInputValidity(inputName, warnMap.name.pattern, warnMap.name.text);
 };
 
 const onPhoneInput = function () {
-  checkInputValidity(warnMap.phone.input, warnMap.phone.pattern, warnMap.phone.text);
+  checkInputValidity(inputPhone, warnMap.phone.pattern, warnMap.phone.text);
 };
 
 const onEmailInput = function () {
-  checkInputValidity(warnMap.email.input, warnMap.email.pattern, warnMap.email.text);
+  checkInputValidity(inputEmail, warnMap.email.pattern, warnMap.email.text);
 };
 
 const addValidationListeners = function () {
