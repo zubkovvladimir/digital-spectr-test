@@ -20,7 +20,8 @@
     "gulp-webpack": "^1.5.0",
     "stylelint": "^10.1.0",
     "stylelint-config-htmlacademy": "^0.1.4",
-    "webpack": "3.3.x"
+    "terser-webpack-plugin": "4.2.3",
+    "webpack": "4.46.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
