@@ -6,7 +6,7 @@ const NAME_TEXT = 'Пожалуйста, используйте только р�
 const PHONE_TEXT = 'Пожалуйста, используйте только цифры, знаки "-" и "+" и пробелы.';
 const EMAIL_TEXT = 'Пожалуйста, введите корреткный email.';
 
-const form = document.querySelector('form');
+const form = document.querySelector('.form');
 
 const warnMap = {
   name: {
@@ -30,10 +30,12 @@ const onFormChange = function (evt) {
   const name = target.name;
   const value = target.value;
 
-  if (value.match(warnMap[name].pattern)) {
-    evt.target.setCustomValidity(warnMap[name].text);
+  const isInvalid = value.match(warnMap[name].pattern);
+
+  if (isInvalid) {
+    target.setCustomValidity(warnMap[name].text);
   } else {
-    evt.target.setCustomValidity('');
+    target.setCustomValidity('');
   }
 };
 
