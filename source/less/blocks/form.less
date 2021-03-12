@@ -45,10 +45,13 @@
   background-color: @blue;
   text-transform: uppercase;
   outline: none;
-  border: 1px solid @blue;
 
-  &:hover,
-  &:focus {
-    border: 1px solid @purple;
+  &:hover {
+    background-color: rgba(105, 121, 248, 0.8);
+  }
+
+  &:active,
+  &:focus  {
+    background-color: rgba(105, 121, 248, 0.6);
   }
 }
