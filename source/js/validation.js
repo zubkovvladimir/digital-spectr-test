@@ -6,9 +6,7 @@ const NAME_TEXT = 'Пожалуйста, используйте только р�
 const PHONE_TEXT = 'Пожалуйста, используйте только цифры, знаки "-" и "+" и пробелы.';
 const EMAIL_TEXT = 'Пожалуйста, введите корреткный email.';
 
-const inputName = document.querySelector('.form__input--name');
-const inputPhone = document.querySelector('.form__input--phone');
-const inputEmail = document.querySelector('.form__input--email');
+const form = document.querySelector('form');
 
 const warnMap = {
   name: {
@@ -27,30 +25,18 @@ const warnMap = {
 
 // валидирует инпуты
 
-const checkInputValidity = function (inputElement, pattern, warn) {
-  const value = inputElement.value;
+const onFormChange = function (evt) {
+  const target = evt.target;
+  const name = target.name;
+  const value = target.value;
 
-  if (value.match(pattern)) {
-    inputElement.setCustomValidity(warn);
+  if (value.match(warnMap[name].pattern)) {
+    evt.target.setCustomValidity(warnMap[name].text);
   } else {
-    inputElement.setCustomValidity('');
+    evt.target.setCustomValidity('');
   }
 };
 
-const onNameInput = function () {
-  checkInputValidity(inputName, warnMap.name.pattern, warnMap.name.text);
-};
-
-const onPhoneInput = function () {
-  checkInputValidity(inputPhone, warnMap.phone.pattern, warnMap.phone.text);
-};
-
-const onEmailInput = function () {
-  checkInputValidity(inputEmail, warnMap.email.pattern, warnMap.email.text);
-};
-
-export const addValidationListeners = function () {
-  inputName.addEventListener('input', onNameInput);
-  inputPhone.addEventListener('input', onPhoneInput);
-  inputEmail.addEventListener('input', onEmailInput);
+export const addValidationListener = function () {
+  form.addEventListener('change', onFormChange);
 };

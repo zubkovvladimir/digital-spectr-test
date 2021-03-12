@@ -1,10 +1,10 @@
-import { addValidationListeners } from './validation.js';
+import { addValidationListener } from './validation.js';
 import { createAlertElement } from './alert.js';
 
 const UPLOAD_URL = 'https://60376bfd5435040017722533.mockapi.io/form';
 const form = document.querySelector('.form');
 
-addValidationListeners();
+addValidationListener();
 
 // отправляет данные формы на сервер
 
