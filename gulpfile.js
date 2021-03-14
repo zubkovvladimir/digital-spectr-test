@@ -33,7 +33,7 @@ function scripts() {
 }
 
 function html() {
-  return src('source/pug/*.pug').
+  return src('source/pug/pages/*.pug').
   pipe(pug({
     pretty: true
   }))
@@ -47,7 +47,7 @@ function clean() {
 function watching() {
   watch(['source/less/**/*.less'], series(styles, refresh));
   watch(['source/js/**/*.js'], series(scripts, refresh));
-  watch(['source/pug/*.pug'], series(html, refresh));
+  watch(['source/pug/**/*.pug'], series(html, refresh));
 }
 
 function refresh(done) {
