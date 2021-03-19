@@ -38,18 +38,6 @@ cd digital-spectr-test
 npm install
 ```
 
-### Запустить тесты
-
-```
-npm run test
-```
-
-### Собрать проект
-
-```
-npm run build
-```
-
 ### Запустить
 
 ```

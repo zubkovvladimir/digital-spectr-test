@@ -29,7 +29,7 @@
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "test": "npm run editorconfig && npm run stylelint && npm run eslint",
     "build": "gulp build",
-    "start": "gulp start"
+    "start": "gulp build && gulp start"
   },
   "browserslist": [
     "last 2 versions",
