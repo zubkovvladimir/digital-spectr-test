@@ -1,5 +1,5 @@
-import { addValidationListener } from './validation.js';
-import { createAlertElement } from './alert.js';
+import { addValidationListener } from './components/validation.js';
+import { createAlertElement } from './components/alert.js';
 
 const UPLOAD_URL = 'https://60376bfd5435040017722533.mockapi.io/form';
 const form = document.querySelector('.form');
