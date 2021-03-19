@@ -5,7 +5,8 @@
 Страница со статичной версткой формы.
 
 ### **Используемые инструменты:**
-1. Pixel Perfect. 
+
+1. Pixel Perfect.
 2. БЭМ
 3. LESS
 4. Gulp
@@ -16,24 +17,41 @@
 9. AJAX
 
 ---
+
 <h2 align="center">Установка и запуск</h2>
 
 ### Скачать
-```sh
+
+```
 git clone git@github.com:zubkovvladimir/digital-spectr-test.git
 ```
 
 ### Перейти в папку
-```sh
-cd digital-spectr-test  
+
+```
+cd digital-spectr-test
 ```
 
 ### Установить
-```sh
+
+```
 npm install
 ```
 
+### Запустить тесты
+
+```
+npm run test
+```
+
+### Собрать проект
+
+```
+npm run build
+```
+
 ### Запустить
-```sh
+
+```
 npm run start
 ```
