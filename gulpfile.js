@@ -1,4 +1,4 @@
-const { src, dest, watch, series, parallel } = require('gulp');
+const { src, dest, watch, series, parallel, task } = require('gulp');
 
 const less = require('gulp-less');
 const rename = require('gulp-rename');
@@ -74,5 +74,5 @@ function browserSync() {
   })
 }
 
-exports.build = series(clean, styles, scripts, html, copy);
-exports.start = parallel(browserSync, watching);
+exports.build = task('build', series(clean, styles, scripts, html, copy));
+exports.start = series('build', parallel(browserSync, watching));
